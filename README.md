@@ -4,11 +4,14 @@
 
 ```json
 {
-  // Editor
-  "editor.fontSize": 14,
-  "editor.lineHeight": 22,
+  "accessibility.signals.chatEditModifiedFile": {
+    "sound": "off"
+  },
+  "editor.accessibilitySupport": "off",
   "editor.fontFamily": "JetBrains Mono",
   "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.lineHeight": 22,
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "editor.detectIndentation": false,
@@ -19,21 +22,21 @@
   "editor.renderWhitespace": "all",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.codeLens": true,
-
-  // Formatting
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "explicit",
     "source.sortImports": "explicit",
     "source.removeUnusedImports": "explicit"
   },
-
-  // Language-specific formatters
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[go]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "golang.go"
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -74,61 +77,42 @@
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-
-  // JavaScript/TypeScript
   "javascript.updateImportsOnFileMove.enabled": "always",
   "javascript.preferences.organizeImports": {
     "enabled": true
   },
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "typescript.inlayHints.variableTypes.enabled": true,
-  "typescript.inlayHints.parameterTypes.enabled": true,
-  "typescript.inlayHints.parameterNames.enabled": "literals",
-
-  // Workbench
-  "workbench.iconTheme": "catppuccin-mocha",
-  "workbench.colorTheme": "Catppuccin Mocha",
-  "workbench.startupEditor": "none",
-  "workbench.editor.revealIfOpen": true,
-  "workbench.editor.preferHistoryBasedLanguageDetection": true,
-  "workbench.editor.enablePreview": false,
-  "workbench.editor.limit.enabled": true,
-  "workbench.editor.limit.value": 6,
-
-  // Window
-  "window.newWindowProfile": "Default",
-  "window.confirmSaveUntitledWorkspace": false,
-
-  // Files
   "files.autoSave": "onWindowChange",
-  "files.trimTrailingWhitespace": true,
-  "files.insertFinalNewline": true,
   "files.defaultLanguage": "markdown",
-
-  // Explorer
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
-
-  // Search
+  "explorer.confirmPasteNative": false,
   "search.exclude": {
     "**/node_modules/**": true
   },
   "search.useIgnoreFiles": false,
-
-  // Terminal
-  "terminal.integrated.fontSize": 13,
-  "terminal.integrated.fontFamily": "monospace",
   "terminal.integrated.cursorBlinking": true,
-
-  // Accessibility
-  "accessibility.signals.chatEditModifiedFile": {
-    "sound": "off"
-  },
-
-  // GitHub Copilot
+  "terminal.integrated.fontFamily": "monospace",
+  "terminal.integrated.fontSize": 13,
+  "workbench.activityBar.location": "top",
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.value": 6,
+  "workbench.editor.preferHistoryBasedLanguageDetection": true,
+  "workbench.editor.revealIfOpen": true,
+  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.startupEditor": "none",
+  "window.confirmSaveUntitledWorkspace": false,
+  "window.newWindowProfile": "Default",
+  "catppuccin.accentColor": "rosewater",
+  "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
+  "containers.orchestratorClient": "com.microsoft.visualstudio.orchestrators.dockercompose",
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
   "github.copilot.nextEditSuggestions.enabled": true,
-
-  // ESLint
   "eslint.enable": true,
   "eslint.validate": [
     "javascript",
@@ -139,12 +123,7 @@
     "vue",
     "html"
   ],
-
-  // Prettier
   "prettier.trailingComma": "all",
-
-  // Indent Rainbow
-  "indentRainbow.indicatorStyle": "light",
   "indentRainbow.colors": [
     "#f5e0dc",
     "#f2cdcd",
@@ -155,13 +134,11 @@
     "#f9e2af",
     "#fab387"
   ],
-
-  // Catppuccin Theme
-  "catppuccin.accentColor": "rosewater",
-
-  // Containers
-  "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
-  "containers.orchestratorClient": "com.microsoft.visualstudio.orchestrators.dockercompose"
+  "indentRainbow.indicatorStyle": "light",
+  "go.toolsManagement.autoUpdate": true,
+  "gopls": {
+    "ui.semanticTokens": true
+  }
 }
 ```
 
