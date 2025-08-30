@@ -17,7 +17,6 @@
   "editor.detectIndentation": false,
   "editor.wordWrap": "on",
   "editor.linkedEditing": true,
-  "editor.snippetSuggestions": "top",
   "editor.suggestSelection": "first",
   "editor.renderWhitespace": "all",
   "editor.cursorSmoothCaretAnimation": "on",
@@ -51,7 +50,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[markdown]": {
     "diffEditor.ignoreTrimWhitespace": false,
@@ -69,7 +68,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -94,6 +93,7 @@
   },
   "search.useIgnoreFiles": false,
   "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.fontFamily": "monospace",
   "terminal.integrated.fontSize": 13,
   "workbench.activityBar.location": "top",
@@ -112,6 +112,21 @@
   "catppuccin.italicComments": false,
   "catppuccin.italicKeywords": false,
   "catppuccin-icons.hidesExplorerArrows": true,
+  "catppuccin.colorOverrides": {
+    "all": {
+      "subtext1": "#b7c3de",
+      "subtext0": "#a2aec8",
+      "overlay2": "#8f9ab2",
+      "overlay1": "#7b869c",
+      "overlay0": "#687286",
+      "surface2": "#545d70",
+      "surface1": "#41495a",
+      "surface0": "#2c3444",
+      "base": "#19202e",
+      "mantle": "#141925",
+      "crust": "#0e121b"
+    },
+  },
   "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
   "containers.orchestratorClient": "com.microsoft.visualstudio.orchestrators.dockercompose",
   "git.confirmSync": false,
@@ -140,7 +155,7 @@
   "go.toolsManagement.autoUpdate": true,
   "gopls": {
     "ui.semanticTokens": true
-  }
+  },
 }
 ```
 
@@ -151,13 +166,21 @@
   "Wrap with div": {
     "scope": "html,javascript,typescript,javascriptreact,typescriptreact,vue",
     "prefix": "wwd",
-    "body": ["<div>", "\t$TM_SELECTED_TEXT$0", "</div>"],
+    "body": [
+      "<div>",
+      "\t$TM_SELECTED_TEXT$0",
+      "</div>"
+    ],
     "description": "Wrap selected HTML with a div"
   },
   "Wrap with react fragment": {
     "scope": "html,javascript,typescript,javascriptreact,typescriptreact,vue",
     "prefix": "wwr",
-    "body": ["<>", "\t$TM_SELECTED_TEXT$0", "</>"],
+    "body": [
+      "<>",
+      "\t$TM_SELECTED_TEXT$0",
+      "</>"
+    ],
     "description": "Wrap selected code with a React fragment"
   },
   "Wrap with Custom Component": {
@@ -173,7 +196,11 @@
   "Wrap with HTML tag": {
     "scope": "html,javascript,typescript,javascriptreact,typescriptreact,vue",
     "prefix": "wwt",
-    "body": ["<${1:div}>$0", "\t${TM_SELECTED_TEXT}", "</${1:div}>"],
+    "body": [
+      "<${1:div}>$0",
+      "\t${TM_SELECTED_TEXT}",
+      "</${1:div}>"
+    ],
     "description": "Wrap selected HTML with a specified tag"
   },
   "React Component (JS)": {
@@ -221,7 +248,11 @@
   "React useEffect": {
     "scope": "javascriptreact,typescriptreact",
     "prefix": "ue",
-    "body": ["useEffect(() => {", "\t$0", "}, []);"],
+    "body": [
+      "useEffect(() => {",
+      "\t$0",
+      "}, []);"
+    ],
     "description": "Create a React useEffect hook with dependencies"
   },
   "Wrap with try-catch": {
@@ -241,8 +272,20 @@
   "Console log with label": {
     "scope": "javascript,typescript,javascriptreact,typescriptreact",
     "prefix": "slog",
-    "body": ["console.log('${1}:', ${1});$0"],
+    "body": [
+      "console.log('${1}:', ${1});$0"
+    ],
     "description": "Console log with a custom label and variable"
+  },
+  "Go nil error check": {
+    "scope": "go",
+    "prefix": "iferr",
+    "body": [
+      "if err != nil {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Check if error is not nil in Go"
   }
 }
 ```
