@@ -114,17 +114,18 @@
   "catppuccin-icons.hidesExplorerArrows": true,
   "catppuccin.colorOverrides": {
     "all": {
-      "subtext1": "#b7c3de",
-      "subtext0": "#a2aec8",
+      "text": "#c8d8f4",
+      "subtext1": "#b6c4de",
+      "subtext0": "#a2afc8",
       "overlay2": "#8f9ab2",
-      "overlay1": "#7b869c",
-      "overlay0": "#687286",
-      "surface2": "#545d70",
-      "surface1": "#41495a",
-      "surface0": "#2c3444",
-      "base": "#19202e",
-      "mantle": "#141925",
-      "crust": "#0e121b"
+      "overlay1": "#7b859c",
+      "overlay0": "#687186",
+      "surface2": "#555c70",
+      "surface1": "#42485a",
+      "surface0": "#2e3344",
+      "base": "#1b1f2e",
+      "mantle": "#161925",
+      "crust": "#0f121b"
     },
   },
   "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
